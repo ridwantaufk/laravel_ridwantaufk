@@ -12,7 +12,7 @@ class PasienController extends Controller
     {
         $rumahSakits = RumahSakit::all();
         $filterRs = $request->get('rumah_sakit_id');
-        $perPage = $request->get('per_page', 10); // defaultawa l 10
+        $perPage = $request->get('per_page', 10); // default 10
 
         $query = Pasien::with('rumahSakit')
             ->when($filterRs, fn($q) => $q->where('rumah_sakit_id', $filterRs));

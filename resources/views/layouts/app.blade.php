@@ -20,6 +20,60 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
+        body {
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        ::selection {
+            background-color: #d8b4fe;
+            /* ungu pastel */
+            color: #3b0764;
+            /* ungu gelap untuk teks */
+        }
+
+        ::-moz-selection {
+            background-color: #d8b4fe;
+            color: #3b0764;
+        }
+
+        input,
+        textarea,
+        select {
+            transition: all 0.2s ease-in-out;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #3b82f6;
+            /* Warna biru */
+            box-shadow: 0 0 0 1px rgba(59, 130, 247, 0.5);
+        }
+
+        .bg-gray-100 {
+            background-color: #f7fafc;
+            /* Warna latar belakang terang */
+        }
+
+        .bg-gray-900 {
+            background-color: #1a202c;
+            /* Warna latar belakang gelap */
+        }
+
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .text-gray-800 {
+            color: #2d3748;
+            /* Warna teks */
+        }
+
+        .text-gray-600 {
+            color: #718096;
+            /* Warna teks sekunder */
+        }
+
         .floating-label {
             position: absolute;
             top: 1rem;
