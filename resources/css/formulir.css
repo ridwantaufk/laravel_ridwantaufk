@@ -1,0 +1,81 @@
+/* .floating-label {
+    position: absolute;
+    top: 1rem;
+    left: 4rem;
+    font-size: 1rem;
+    color: #6c757d;
+    pointer-events: none;
+    background-color: white;
+    padding: 0 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.textarea-floatinglabel {
+    position: absolute;
+    top: 1.7rem;
+    left: 4rem;
+    font-size: 1rem;
+    color: #6c757d;
+    pointer-events: none;
+    background-color: white;
+    padding: 0 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.floating-input:focus + .floating-label,
+.floating-input.has-value + .floating-label {
+    top: -0.65rem;
+    left: 2.75rem;
+    font-size: 0.8rem;
+    color: #0d6efd;
+}
+
+.floating-input:focus + .textarea-floatinglabel,
+.floating-input.has-value + .textarea-floatinglabel {
+    top: -0.65rem;
+    left: 2.75rem;
+    font-size: 0.8rem;
+    color: #0d6efd;
+}
+
+.floating-group {
+    position: relative;
+}
+
+.floating-input {
+    height: 3.5rem;
+    padding: 1rem 1rem 0.5rem 3.5rem;
+    font-size: 1rem;
+    border: 2px solid #ced4da;
+    border-radius: 0.75rem;
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.15);
+}
+
+.floating-icon {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    z-index: 2;
+}
+
+textarea.floating-input {
+    height: auto;
+    min-height: 5rem;
+    padding-top: 1.5rem;
+} */
