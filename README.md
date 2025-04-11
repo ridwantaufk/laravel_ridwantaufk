@@ -9,26 +9,21 @@
 
 ## I am using PHP version 8.4.6 in the development of this Laravel project.
 
-<details>
-<summary>📸 Click to view screenshots</summary>
+## Screenshots
 
-<br>
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
 
-<p align="center">
-  <!-- Gambar utama yang lebih besar -->
-  <img src="assets/data-rs.png" alt="Data RS" width="800"><br><br>
+  <!-- Gambar besar -->
+  <img src="assets/data-rs.png" alt="Data RS" style="width: 1200px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);" />
 
-  <!-- Gambar lainnya ukuran standar -->
+  <!-- Gambar-gambar lainnya -->
+  <img src="assets/login.png" alt="Login" style="width: 400px; border-radius: 8px;" />
+  <img src="assets/edit-data-rs.png" alt="Edit RS" style="width: 400px; border-radius: 8px;" />
+  <img src="assets/delete-data-pasien.png" alt="Delete Pasien" style="width: 400px; border-radius: 8px;" />
+  <img src="assets/data-pasien.jpg" alt="Data Pasien" style="width: 400px; border-radius: 8px;" />
+  <img src="assets/register.png" alt="Register" style="width: 400px; border-radius: 8px;" />
 
-<img src="assets/login.png" alt="Login" width="600"><br><br>
-<img src="assets/edit-data-rs.png" alt="Edit RS" width="600"><br><br>
-<img src="assets/delete-data-pasien.png" alt="Delete Pasien" width="600"><br><br>
-<img src="assets/data-pasien.jpg" alt="Data Pasien" width="600"><br><br>
-<img src="assets/register.png" alt="Register" width="600">
-
-</p>
-
-</details>
+</div>
 
 ## About Laravel
 
