@@ -11,9 +11,9 @@
     <tbody>
         @forelse($data as $pasien)
             <tr>
-                <td>{{ $pasien->nama_pasien }}</td>
+                <td>{{ $pasien->nama }}</td>
                 <td>{{ $pasien->alamat }}</td>
-                <td>{{ $pasien->no_telpon }}</td>
+                <td>{{ $pasien->telepon }}</td>
                 <td>{{ $pasien->rumahSakit->nama ?? '-' }}</td>
                 <td>
                     <a href="{{ route('pasien.edit', $pasien->id) }}" class="btn btn-sm btn-warning">Edit</a>

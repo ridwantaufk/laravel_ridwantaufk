@@ -1,18 +1,65 @@
 @csrf
-<div class="mb-3">
-    <label for="nama" class="form-label">Nama Rumah Sakit</label>
-    <input type="text" name="nama" class="form-control" value="{{ old('nama', $rs->nama ?? '') }}" required>
+@php
+    $fields = [
+        [
+            'name' => 'nama',
+            'type' => 'text',
+            'label' => 'Nama Rumah Sakit',
+            'icon' => 'bi-hospital text-info',
+            'placeholder' => 'Masukkan nama rumah sakit',
+        ],
+        [
+            'name' => 'alamat',
+            'type' => 'textarea',
+            'label' => 'Alamat',
+            'icon' => 'bi-geo-alt-fill text-danger',
+            'placeholder' => 'Masukkan alamat lengkap',
+        ],
+        [
+            'name' => 'email',
+            'type' => 'email',
+            'label' => 'Email',
+            'icon' => 'bi-envelope-fill text-warning',
+            'placeholder' => 'contoh: info@rumahsakit.id',
+        ],
+        [
+            'name' => 'telepon',
+            'type' => 'text',
+            'label' => 'Telepon',
+            'icon' => 'bi-telephone-fill text-success',
+            'placeholder' => 'contoh: 08123456789',
+        ],
+    ];
+@endphp
+
+<div class="row">
+    @foreach ($fields as $field)
+        @php
+            $value = old($field['name'], $rs->{$field['name']} ?? '');
+        @endphp
+
+        <div class="col-12 mb-4 floating-group">
+            <i class="bi {{ $field['icon'] }} floating-icon"></i>
+
+            @if ($field['type'] === 'textarea')
+                <textarea id="{{ $field['name'] }}" name="{{ $field['name'] }}" class="form-control floating-input" placeholder=" "
+                    rows="1" required>{{ $value }}</textarea>
+                <label for="{{ $field['name'] }}" class="textarea-floatinglabel">
+                    {{ $field['label'] }} <span class="text-danger">*</span>
+                </label>
+            @else
+                <input type="{{ $field['type'] }}" id="{{ $field['name'] }}" name="{{ $field['name'] }}"
+                    value="{{ $value }}" class="form-control floating-input" placeholder=" " required
+                    @if ($field['name'] === 'telepon') oninput="this.value = this.value.replace(/[^0-9]/g, '')" @endif>
+                <label for="{{ $field['name'] }}" class="floating-label">
+                    {{ $field['label'] }} <span class="text-danger">*</span>
+                </label>
+            @endif
+
+
+            @error($field['name'])
+                <div class="text-danger small mt-1">{{ $message }}</div>
+            @enderror
+        </div>
+    @endforeach
 </div>
-<div class="mb-3">
-    <label for="alamat" class="form-label">Alamat</label>
-    <textarea name="alamat" class="form-control" required>{{ old('alamat', $rs->alamat ?? '') }}</textarea>
-</div>
-<div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" name="email" class="form-control" value="{{ old('email', $rs->email ?? '') }}">
-</div>
-<div class="mb-3">
-    <label for="telepon" class="form-label">Telepon</label>
-    <input type="text" name="telepon" class="form-control" value="{{ old('telepon', $rs->telepon ?? '') }}">
-</div>
-<button type="submit" class="btn btn-success">Simpan</button>
